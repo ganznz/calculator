@@ -47,7 +47,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(0.8);
+    transform: scale(0.7);
 }
 
 .phone-body-container {
