@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: 'Arimo', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: rgb(120, 120, 120);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phone-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.off-screen {
+    width: 500px;
+    height: 800px;
+    position: absolute;
+    transform: translateY(-50px);
+    background-color: rgb(10, 10, 10);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.off-screen.turned-off {
+    background-color: rgb(10, 10, 10);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.phone-frame {
+    filter: drop-shadow(0px 0px 10px rgb(93, 93, 93));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.8);
+}
+
+.phone-body-container {
+    height: 750px;
+    width: 400px;
+    background: rgb(10, 10, 10);
+    border-radius: 60px;
+    border: 5px solid rgb(172, 172, 172);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 50px;
+    transform: scale(1); /* so overflow:hidden can apply to light sheens */
+    overflow: hidden;
+    flex: 0 0 auto;
+}
+
+.phone-btns {
+    display: flex;
+    justify-content: space-between;
+    width: 415px;
+    position: absolute;
+    transform: translateY(-130px);
+    z-index: -1;
+}
+
+.left-btns {
+    display: flex;
+    flex-direction: column;
+}
+
+.accessory-btn {
+    background-color: rgb(149, 149, 149);
+    width: 20px;
+    height: 45px;
+    border-radius: 4px;
+}
+
+.mute-btn {
+    margin-bottom: 20px;
+    height: 25px;
+}
+
+.top-vol-btn {
+    margin-bottom: 15px;
+}
+
+.power-btn {
+    height: 80px;
+    transition: 0.5s;
+}
+
+.power-btn:hover {
+    transform: translateX(10px);
+    width: 50px;
+    background-color: rgb(202, 202, 202);
+}
+
+.light-sheen-1, .light-sheen-2 {
+    width: 900px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    transform: rotateZ(-35deg);
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.light-sheen-1 {
+    height: 450px;
+    bottom: -100px;
+    opacity: 0.07;
+    z-index: 2;
+}
+
+.light-sheen-2 {
+    height: 700px;
+    bottom: -200px;
+    left: -200px;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.phone-body-container:hover .light-sheen-1, .light-sheen-1:hover {
+    height: 520px;
+}
+
+.phone-body-container:hover .light-sheen-2, .light-sheen-2:hover {
+    height: 730px;
+}
+
+.upper-icons {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    font-weight: bold;
+    gap: 8px;
+}
+
+.front-camera-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    transform: translateX(20px);
+}
+
+.top-bar {
+    height: 7px;
+    width: 70px;
+    background: rgb(42, 42, 42);
+    border-radius: 100px;
+}
+
+.front-camera {
+    background: rgb(28, 42, 104);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+.upper-icons img {
+    width: 17px;
+    height: auto;
+    margin: 0 2px;
+}
+
+.number-display {
+    text-align: right;
+    margin-bottom: 15px;
+    height: 80px;
+    font-weight: lighter;
+    font-size: 60px;
+    padding: 0 17px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    justify-content: center;
+}
+
+/* #reset-btn {
+    margin-left: 83px;
+} */
+
+.numpad-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    border: none;
+    font-size: 35px;
+}
+
+.long-btn {
+    flex-basis: 44%;
+    text-align: left;
+    padding-left: 24px;
+}
+
+
+.light-grey {
+    background-color: rgb(159, 159, 159);
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+}
+
+.grey {
+    background-color: rgb(49, 49, 49);
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.orange {
+    background-color: rgb(246, 154, 6);
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    transition: 0.3s;
+}
+
+.selected {
+    background-color: rgb(255, 255, 255);
+    color: rgb(246, 154, 6);
+    transition: 0.2s;
+}
+
+.numpad-btn:hover {
+    transform: translateY(-4px);
+}
+
+.light-grey:hover {
+    background-color: rgb(185, 185, 185);
+    filter: drop-shadow(0px 4px rgb(95, 95, 95));
+}
+
+.grey:hover {
+    background-color: rgb(77, 77, 77);
+    filter: drop-shadow(0px 4px rgb(22, 22, 22));
+}
+
+.orange:hover {
+    background-color: rgb(255, 181, 21);
+    filter: drop-shadow(0px 4px rgb(168, 104, 1));
+}
+
+.selected:hover {
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(0px 4px rgb(190, 190, 190));
+    color: rgb(246, 154, 6);
+}
+
+footer {
+    background: linear-gradient(rgb(180, 180, 180), rgb(160, 160, 160));
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+footer:hover {
+    filter: drop-shadow(0 -13px 0 rgba(160, 160, 160, 0.3));
+}
+
+#github-logo {
+    height: auto;
+    width: 40px;
+    transition: 0.2s;
+}
+
+#github-logo:hover {
+    transform: rotate(-15deg);
+}
+
+footer h3 {
+    color: white;
+    font-weight: bold;
+    -webkit-text-stroke: 3px rgba(255, 255, 255, 0.3);
+}

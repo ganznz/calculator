@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/app.js" defer></script>
+    <script src="js/UpdateTime.js" defer></script>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="phone-frame">
+            <div class="phone-btns">
+                <div class="left-btns">
+                    <div class="mute-btn accessory-btn"></div>
+                    <div class="top-vol-btn accessory-btn"></div>
+                    <div class="bottom-vol-btn accessory-btn"></div>
+                </div>
+                <div class="power-btn accessory-btn"></div>
+            </div>
+            <div class="phone-body-container">
+                <div class="off-screen"></div>
+                <div class="light-sheen-1"></div>
+                <div class="light-sheen-2"></div>
+                <div class="upper-icons">
+                    <p id="time-text">4:20</p>
+                    <div class="front-camera-section">
+                        <div class="top-bar"></div>
+                        <div class="front-camera"></div>
+                    </div>
+                    <div class="stat-icons">
+                        <img class="push" src="images/signal-bars.png">
+                        <img src="images/wifi-bars.png">
+                        <img src="images/battery-icon.png">
+                    </div>
+                </div>
+                <div class="main-content">
+                    <h1 class="number-display">0</h1>
+                    <div class="button-container">
+                        <button class="light-grey numpad-btn" id="reset-btn" type="button">AC</button>
+                        <button class="light-grey numpad-btn" id="percent-btn" type="button">%</button>
+                        <button class="light-grey numpad-btn" id="backspace-btn" type="button">🠔</button>
+                        <button class="orange numpad-btn operator-btn" id="divide" type="button">÷</button>
+                        <button class="grey numpad-btn numpad-number" type="button">7</button>
+                        <button class="grey numpad-btn numpad-number" type="button">8</button>
+                        <button class="grey numpad-btn numpad-number" type="button">9</button>
+                        <button class="orange numpad-btn operator-btn" id="multiply" type="button">×</button>
+                        <button class="grey numpad-btn numpad-number" type="button">4</button>
+                        <button class="grey numpad-btn numpad-number" type="button">5</button>
+                        <button class="grey numpad-btn numpad-number" type="button">6</button>
+                        <button class="orange numpad-btn operator-btn" id="subtract" type="button">−</button>
+                        <button class="grey numpad-btn numpad-number" type="button">1</button>
+                        <button class="grey numpad-btn numpad-number" type="button">2</button>
+                        <button class="grey numpad-btn numpad-number" type="button">3</button>
+                        <button class="orange numpad-btn operator-btn" id="add" type="button">+</button>
+                        <button class="grey numpad-btn long-btn numpad-number" type="button">0</button>
+                        <button class="grey numpad-btn numpad-number" type="button">.</button>
+                        <button class="orange numpad-btn" id="equals" type="button">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <footer>
+        <h3>Made by Ganz</h3>
+        <a href="https://github.com/Lollganz/calculator" target="_blank"><img id="github-logo" src="images/GitHub-Mark-120px-plus.png" alt="View Repository"></a>
+    </footer> -->
+</body>
+</html>
