@@ -5,11 +5,16 @@ timeDisplayText.textContent = `${dateHours.toString()}:${dateMins.toString()}`;
 
 
 const changeTime = () => {
-    dateHours = new Date().getHours();
-    dateMins = new Date().getMinutes()
+    dateHours = new Date().getHours() ;
+    dateMins = new Date().getMinutes();
 
-    dateMins < 10 ? timeDisplayText.textContent = `${dateHours.toString()}:0${dateMins.toString()}`
-    : timeDisplayText.textContent = `${dateHours.toString()}:${dateMins.toString()}`;
+    minsDisplay = dateMins < 10 ? `0${dateMins.toString()}`
+    : `${dateMins.toString()}`;
+    
+    hoursDisplay = dateHours < 10 ? `0${dateHours.toString()}`
+    : `${dateHours.toString()}`
+
+    timeDisplayText.textContent = `${hoursDisplay}:${minsDisplay}`
 }
 
 setInterval(changeTime, 1000);
