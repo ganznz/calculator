@@ -1,6 +1,6 @@
 A calculator that can do basic math.
 
-**LIVE:** https://lollganz.github.io/calculator/
+**LIVE:** https://ganznz.github.io/calculator/
 
 __Main Features:__
 - Featuring add, subtract, multiply and divide operations.
